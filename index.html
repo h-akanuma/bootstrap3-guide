@@ -4,20 +4,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my-style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container" style="border:dotted 1px #000;">
-      <h1>見出し1</h1>
-      <h2>見出し2</h2>
-      <h3>見出し3</h3>
-      <h4>見出し4</h4>
-      <h5>見出し5</h5>
-      <h6>見出し6</h6>
-      <p>本文</p>
-      <pre>整形済みテキスト</pre>
-      <blockquote>引用</blockquote>
-      <code>プログラムのコード</code><br>
-      <p>リンク：<a href="http://www.google.co.jp/">Google</a></p>
+    <div class="container">
+      <!--
+      <h1 class="page-header">コンテンツのタイトル</h1>
+      <div class="jumbotron">
+        <h1>コンテンツのタイトル</h1>
+        <p>コンテンツの概説など</p>
+      </div>
+      <p>コンテンツの本文</p>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">タイトル</h1>
+        </div>
+        <div class="panel-body">
+          ボディ部<br>パネルのボデイ部
+        </div>
+        <div class="panel-footer">
+          フッター
+        </div>
+      </div>
+      -->
+
+      <div class="panel panel-primary verticalcenter">
+        <div class="panel-heading">
+          <h1 class="panel-title">ログイン</h1>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="username">ログイン名</label>
+              <input type="text" class="form-control" id="username">
+            </div>
+            <div class="form-group">
+              <label for="password">パスワード</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-default">ログイン</button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="js/jquery-1.11.1.min.js"></script>

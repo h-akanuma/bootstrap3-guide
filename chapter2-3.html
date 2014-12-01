@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>レスポンシブWebデザインの例</h1>
+      <h2>「Extra Small」と「それ以外」で切り替える例</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6" style="border:solid 1px #000;">段落①-A</div>
+        <div class="col-xs-12 col-sm-6" style="border:solid 1px #000;">段落①-B</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6" style="border:solid 1px #000;">段落②-A</div>
+        <div class="col-xs-12 col-sm-6" style="border:solid 1px #000;">段落②-B</div>
+      </div>
+
+      <h2>「Extra Small」「Small」「Middle」「Large」で切り替える例</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border:solid 1px #000;">段落③-A</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border:solid 1px #000;">段落③-B</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border:solid 1px #000;">段落③-C</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="border:solid 1px #000;">段落③-D</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 col-sm-push-6" style="border:solid 1px #000;">段落A</div>
+        <div class="col-xs-6 col-sm-pull-6" style="border:solid 1px #000;">段落B</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 hidden" style="border:solid 1px #000;">ここは非表示です</div>
+        <div class="col-xs-6" style="border:solid 1px #000;">hiddenの右のブロック</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 invisible" style="border:solid 1px #000;">ここは非表示です</div>
+        <div class="col-xs-6" style="border:solid 1px #000;">invisibleの右のブロック</div>
+      </div>
+
+      <div class="row">
+        <nav class="col-md-2 hidden-xs hidden-sm" style="border:solid 1px #000;">
+          <ul>
+            <li>メニュー1</li>
+            <li>メニュー2</li>
+            <li>メニュー3</li>
+          </ul>
+        </nav>
+        <div class="col-xs-12 col-md-10" style="border:solid 1px #000;">
+          <p>コンテンツ</p>
+        </div>
+      </div>
+
+      <div class="row hidden-print">
+        <a href="menu.html">メニューに戻る</a>&nbsp;
+        <button onclick="window.print();">印刷する</button>
+      </div>
+
+      <div class="row">
+        <table class="table table-bordered">
+          <tr><th>ID</th><th>写真名</th><th>更新日</th><th>ステータス</th></tr>
+          <tr>
+            <td>1</td><td>ひまわり</td><td>2013-05-15</td>
+            <td>公開済み</td>
+          </tr>
+          <tr>
+            <td>2</td><td>ワニ肉</td><td>2013-11-10</td>
+            <td>編集中</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
