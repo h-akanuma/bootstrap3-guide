@@ -9,65 +9,53 @@
   </head>
   <body>
     <div class="container">
-      <ul class="list-inline">
-        <li>項目1</li>
-        <li>項目2</li>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">顧客一覧</a></li>
+        <li><a href="#">商品一覧</a></li>
+        <li><a href="#">注文一覧</a></li>
+        <li class="disabled"><a href="#">管理メニュー</a></li>
       </ul>
 
-      <dl class="dl-horizontal">
-        <dt>新規登録</dt>
-        <dd>ユーザーを新規に登録します。</dd>
-      </dl>
-      <dl class="dl-horizontal">
-        <dt>編集</dt>
-        <dd>ユーザーを編集します。</dd>
-      </dl>
-      <dl class="dl-horizontal">
-        <dt>削除</dt>
-        <dd>ユーザーを削除します。未発送の商品があるユーザーは削除できません。</dd>
-      </dl>
-
-      <ul class="listgroup">
-        <li class="list-group-item"><span class="badge">10</span>未入金</li>
-        <li class="list-group-item"><span class="badge">5</span>入金済み</li>
-        <li class="list-group-item">発送手配中</li>
-        <li class="list-group-item">発送中</li>
-        <li class="list-group-item">発送完了</li>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">顧客一覧</a></li>
+        <li><a href="#">商品一覧</a></li>
+        <li><a href="#">注文一覧</a></li>
+        <li class="disabled"><a href="#">管理メニュー</a></li>
       </ul>
+    </div>
 
-      <div class="listgroup">
-        <a href="#" class="list-group-item"><span class="badge">10</span>未入金</a>
-        <a href="#" class="list-group-item active"><span class="badge">5</span>入金済み</a>
-        <a href="#" class="list-group-item">発送手配中</a>
-        <a href="#" class="list-group-item">発送中</a>
-        <a href="#" class="list-group-item">発送完了</a>
+    <div class="row">
+      <div class="col-xs-4">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#">顧客一覧</a></li>
+          <li><a href="#">商品一覧</a></li>
+          <li><a href="#">注文一覧</a></li>
+          <li class="disabled"><a href="#">管理メニュー</a></li>
+        </ul>
       </div>
+      <div class="col-xs-8">
+        コンテンツ
+      </div>
+    </div>
 
-      <div class="listgroup">
-        <a href="#" class="list-group-item">
-          <h4 class="list-group-item-heading">新着注文</h4>
-          <p class="list-group-item-text">山田三郎様から注文がありました</p>
-        </a>
-        <a href="#" class="list-group-item">
-          <h4 class="list-group-item-heading">入金完了</h4>
-          <p class="list-group-item-text">鈴木史郎様から入金がありました</p>
-        </a>
-        <a href="#" class="list-group-item">
-          <h4 class="list-group-item-heading">ステータス変更</h4>
-          <p class="list-group-item-text">田中五郎様の注文が発送中になりました</p>
-        </a>
-      </div>
+    <ul class="nav nav-pills nav-justified">
+      <li class="active"><a href="#">顧客一覧</a></li>
+      <li><a href="#">商品一覧</a></li>
+      <li><a href="#">注文一覧</a></li>
+      <li class="disabled"><a href="#">管理メニュー</a></li>
+    </ul>
 
-      <div class="media">
-        <div class="pull-left">
-          <img class="media-object" data-src="holder.js/100x180" alt="ワニ肉の写真">
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">ワニ肉</h4>
-          <p>ジューシーなワニ肉。焼き鳥のような味わい。</p>
-          <button class="btn btn-default pull-right">詳細</button>
-        </div>
-      </div>
+    <ul class="nav nav-pills">
+      <li class="active"><a href="#customer" data-toggle="tab">顧客一覧</a></li>
+      <li><a href="#product" data-toggle="tab">商品一覧</a></li>
+      <li><a href="#order" data-toggle="tab">注文一覧</a></li>
+      <li class="disabled" data-toggle="tab"><a href="#admin">管理メニュー</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="customer">顧客コンテンツ</div>
+      <div class="tab-pane" id="product">商品コンテンツ</div>
+      <div class="tab-pane" id="order">注文コンテンツ</div>
+      <div class="tab-pane" id="admin">管理コンテンツ</div>
     </div>
 
     <script src="js/jquery-1.11.1.min.js"></script>

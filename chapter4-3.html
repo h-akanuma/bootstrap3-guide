@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my-style.css" rel="stylesheet">
+    <script src="js/holder.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="list-inline">
+        <li>項目1</li>
+        <li>項目2</li>
+      </ul>
+
+      <dl class="dl-horizontal">
+        <dt>新規登録</dt>
+        <dd>ユーザーを新規に登録します。</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt>編集</dt>
+        <dd>ユーザーを編集します。</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt>削除</dt>
+        <dd>ユーザーを削除します。未発送の商品があるユーザーは削除できません。</dd>
+      </dl>
+
+      <ul class="listgroup">
+        <li class="list-group-item"><span class="badge">10</span>未入金</li>
+        <li class="list-group-item"><span class="badge">5</span>入金済み</li>
+        <li class="list-group-item">発送手配中</li>
+        <li class="list-group-item">発送中</li>
+        <li class="list-group-item">発送完了</li>
+      </ul>
+
+      <div class="listgroup">
+        <a href="#" class="list-group-item"><span class="badge">10</span>未入金</a>
+        <a href="#" class="list-group-item active"><span class="badge">5</span>入金済み</a>
+        <a href="#" class="list-group-item">発送手配中</a>
+        <a href="#" class="list-group-item">発送中</a>
+        <a href="#" class="list-group-item">発送完了</a>
+      </div>
+
+      <div class="listgroup">
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">新着注文</h4>
+          <p class="list-group-item-text">山田三郎様から注文がありました</p>
+        </a>
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">入金完了</h4>
+          <p class="list-group-item-text">鈴木史郎様から入金がありました</p>
+        </a>
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">ステータス変更</h4>
+          <p class="list-group-item-text">田中五郎様の注文が発送中になりました</p>
+        </a>
+      </div>
+
+      <div class="media">
+        <div class="pull-left">
+          <img class="media-object" data-src="holder.js/100x70" alt="ワニ肉の写真">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">ワニ肉</h4>
+          <p>ジューシーなワニ肉。焼き鳥のような味わい。</p>
+          <button class="btn btn-default pull-right">詳細</button>
+        </div>
+      </div>
+
+      <ul class="media-list">
+        <li class="media">
+          <div class="pull-left">
+            <img class="media-object" data-src="holder.js/100x100" alt="ワニ肉の写真">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">ワニ肉</h4>
+            <p>ジューシーなワニ肉。焼き鳥のような味わい。</p>
+            <button class="btn btn-default pull-right">詳細</button>
+          </div>
+        </li>
+        <li class="media">
+          <div class="pull-left">
+            <img class="media-object" data-src="holder.js/100x100" alt="バナナの写真">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">バナナ</h4>
+            <p>温室になっているバナナ。青いうちに収穫する。</p>
+            <button class="btn btn-default pull-right">詳細</button>
+          </div>
+        </li>
+        <li class="media">
+          <div class="pull-left">
+            <img class="media-object" data-src="holder.js/100x100" alt="タケノコ">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">タケノコ</h4>
+            <p>皮のまま七輪で焼く。ほっくり焼けたところを見計らって食べる。</p>
+            <button class="btn btn-default pull-right">詳細</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
