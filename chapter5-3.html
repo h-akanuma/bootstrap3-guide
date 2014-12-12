@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my-style.css" rel="stylesheet">
+    <script src="js/holder.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">注文管理システム</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+            <span class="sr-only">ナビゲーションボタン</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="mymenu">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span>顧客管理</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-gift"></span>商品管理</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>注文管理</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#"><span class="glyphicon glyphicon-print"></span>印刷</a></li>
+          </ul>
+
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="検索">
+            </div>
+            <button type="submit" class="btn btn-default">検索</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>設定</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="modal" role="dialog" area-hidden="true" id="mymodal" data-keyboard="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- ヘッダー -->
+            <div class="modal-header">
+              <!-- [x] ボタン -->
+              <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">タイトル</h4>
+            </div>
+            <!-- 本文 -->
+            <div class="modal-body">
+              <p>本文本文。</p>
+            </div>
+            <!-- フッター -->
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-dismiss="modal">閉じる</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        ダイアログを開く
+      </button>
+
+      <div class="modal" role="dialog" area-hidden="true" id="mymodal2"></div>
+
+      <button class="btn btn-primary" data-toggle="modal" href="dialog.html" data-target="#mymodal2">
+        ダイアログ2を開く
+      </button>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        $('#mymodal').on('hide.bs.modal', function(e) {
+          if (!confirm('閉じてよろしいですか？'))
+          {
+            e.preventDefault();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
