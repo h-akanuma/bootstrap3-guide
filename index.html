@@ -46,66 +46,17 @@
     </nav>
 
     <div class="container">
-      <!--
-      <div class="dropdown" id="mydropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button"
-          data-toggle="dropdown" data-target="#mydropdown" id="mylabel">
-          ドロップダウンの例
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="mylabel">
-          <li role="presentation" class="dropdown-header">ヘッダータイトル</li>
-          <li role="presentation">
-            <a role="menuitem" tabindex="-1" href="example01.html">外部リンク1</a>
-          </li>
-          <li role="presentation">
-            <a href="menuitem" tabindex="-1" href="#inlink01.html">内部リンク1</a>
-          </li>
-          <li role="presentation">
-            <a href="menuitem" tabindex="-1" href="#inlink02.html">内部リンク2</a>
-          </li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation" class="dropdown-header">ヘッダータイトル2</li>
-          <li role="presentation" class="disabled">
-            <a role="menuitem" tabindex="-1" href="exampleA.href">項目A</a>
-          </li>
-        </ul>
-      </div>
-      -->
-
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-default">
-          <input type="checkbox" id="toggle1" name="toggle1">トグルボタン1
-        </label>
-        <label class="btn btn-default">
-          <input type="checkbox" id="toggle2" name="toggle2">トグルボタン2
-        </label>
-        <label class="btn btn-default">
-          <input type="checkbox" id="toggle3" name="toggle3">トグルボタン3
-        </label>
-      </div>
-
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-default">
-          <input type="radio" id="toggle1" name="toggle">トグルボタン1
-        </label>
-        <label class="btn btn-default">
-          <input type="radio" id="toggle2" name="toggle">トグルボタン2
-        </label>
-        <label class="btn btn-default">
-          <input type="radio" id="toggle3" name="toggle">トグルボタン3
-        </label>
-      </div>
-
-      <button type="button" id="mybutton" class="btn btn-default"
-        data-loading-text="処理中">クリックしてください</button>
-
-      <div class="dropdown" id="mydropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button"
-          data-toggle="dropdown" data-target="#mydropdown" id="mylabel">
-          ドロップダウン<span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="mylabel" id="menulist"></ul>
+      <ul class="nav nav-tabs" id="mytab">
+        <li class="active">
+          <a href="#tab1" data-toggle="tab">タブ1</a>
+        </li>
+        <li><a href="#tab2" data-toggle="tab">タブ2</a></li>
+        <li><a href="#tab3" data-toggle="tab">タブ3</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active fade in" id="tab1">タブコンテンツ1</div>
+        <div class="tab-pane fade" id="tab2">タブコンテンツ2</div>
+        <div class="tab-pane fade" id="tab3">タブコンテンツ3</div>
       </div>
     </div>
 
@@ -113,44 +64,6 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-      // メニュー定義
-      var menus = ['メニュー1', 'メニュー2', 'メニュー3'];
-      var menu_selected = {};
-
-      $(function() {
-        $('#mybutton').on('click', function(e) {
-          var btn = $(this);
-          btn.button('loading');
-          setTimeout(function() {
-            btn.button('reset');
-          }, 2000);
-        });
-
-        // ドロップダウンリストが開かれようとする時のイベント
-        $('#mydropdown').on('show.bs.dropdown', function(e) {
-          var icon;
-          var ul = $('#menulist');
-          ul.empty();
-          // メニューを動的に作成する
-          $.each(menus, function(i) {
-            icon = "";
-            if (menu_selected[i]) {
-              icon = "<span class='glyphicon glyphicon-ok'></span>";
-            }
-            ul.append("<li role='presentation'>" +
-              "<a href='#' data-index='" + i +
-              "' tabindex='-1'>" + icon + this + "</a></li>");
-          });
-        });
-
-        // メニュー項目がクリックされた時のイベント
-        $('#menulist').on('click', function(e) {
-          var index = $(e.target).attr('data-index');
-          if (index !== undefined) {
-            menu_selected[index] = menu_selected[index] ? false : true;
-          }
-        });
-      });
     </script>
   </body>
 </html>
