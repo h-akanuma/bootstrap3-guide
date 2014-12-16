@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my-style.css" rel="stylesheet">
+    <script src="js/holder.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">注文管理システム</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+            <span class="sr-only">ナビゲーションボタン</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="mymenu">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span>顧客管理</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-gift"></span>商品管理</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>注文管理</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#"><span class="glyphicon glyphicon-print"></span>印刷</a></li>
+          </ul>
+
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="検索">
+            </div>
+            <button type="submit" class="btn btn-default">検索</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>設定</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <ul class="nav nav-tabs" id="mytab">
+        <li class="active">
+          <a href="#tab1" data-toggle="tab">タブ1</a>
+        </li>
+        <li><a href="#tab2" data-toggle="tab">タブ2</a></li>
+        <li><a href="#tab3" data-toggle="tab">タブ3</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active fade in" id="tab1">タブコンテンツ1</div>
+        <div class="tab-pane fade" id="tab2">タブコンテンツ2</div>
+        <div class="tab-pane fade" id="tab3">タブコンテンツ3</div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#closepanel">
+              見出し
+            </a>
+          </h4>
+        </div>
+        <div id="closepanel" class="panel-collapse collapse fade in">
+          <div class="panel-body">
+            <p>本文<br>本文<br>本文</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-group" id="mygroup">
+        <!-- パネルA -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#closepanelA" data-parent="#mygroup">
+                パネルA
+              </a>
+            </h4>
+          </div>
+          <div id="closepanelA" class="panel-collapse collapse in">
+            <div class="panel-body">パネルAの内容</div>
+          </div>
+        </div>
+
+        <!-- パネルB -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#closepanelB" data-parent="#mygroup">
+                パネルB
+              </a>
+            </h4>
+          </div>
+          <div id="closepanelB" class="panel-collapse collapse">
+            <div class="panel-body">パネルBの内容</div>
+          </div>
+        </div>
+
+        <!-- パネルC -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#closepanelC" data-parent="#mygroup">
+                パネルC
+              </a>
+            </h4>
+          </div>
+          <div id="closepanelC" class="panel-collapse collapse">
+            <div class="panel-body">パネルCの内容</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        $('#mytab').on('show.bs.tab', function(e) {
+          var fromTab = e.relatedTarget;
+          var toTab = e.target;
+
+          if (!confirm(
+            fromTab.innerHTML + 'から' + toTab.innerHTML + 'に切り替えます。よろしいですか？'
+          ))
+          {
+            e.preventDefault();
+          }
+        });
+
+        $('#closepanel').on('hide.bs.collapse', function(e) {
+          if (!confirm('閉じてもよろしいですか？')) {
+            e.preventDefault();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
